@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey</title>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <link href="/style.css" rel="stylesheet">
+    </head>
+
+    
+    <form class="container" id="survey-form">
+        <header>
+            <h1 id="title">Feedback Form</h1>
+            <p id="description">Please leave feedback below so we can improve our service</p>
+        </header>
+        <body>
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your Email"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age <span class="clue">(optional)</span></label>
+                <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="10"
+                    max="99"
+                    class="form-control"
+                    placeholder="Age"
+                />
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="dropdown">How did you find out about us?</label>
+                <select id="dropdown" name="role" class="form-control" required>
+                  <option disabled selected value>Select current role</option>
+                  <option value="student">Option #1</option>
+                  <option value="job">Option #2</option>
+                  <option value="learner">Option #3</option>
+                  <option value="preferNo">Prefer not to say</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
+          
+            <div class="form-group">
+                <p>Would you recommend our service to a friend?</p>
+                <label>
+                  <input
+                    name="user-recommend"
+                    value="definitely"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                  />Definitely</label
+                >
+                <label>
+                    <input
+                      name="user-recommend"
+                      value="maybe"
+                      type="radio"
+                      class="input-radio"
+                    />Maybe</label
+                  >
+            
+                  <label
+                    ><input
+                      name="user-recommend"
+                      value="not-sure"
+                      type="radio"
+                      class="input-radio"
+                    />Not sure</label
+                  >
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea
+                  id="comments"
+                  class="input-textarea"
+                  name="comment"
+                  placeholder="Enter your comment here..."
+                ></textarea>
+              </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                  Submit
+                </button>
+              </div>
+        </body>
+    </form>
+
+</html>

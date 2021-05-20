@@ -16,16 +16,31 @@ body {
 li, a, button {
     font-weight: 500;
     font-size: 16px;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+}
+
+nav li a{
+    color: white;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 10%;
     
+}
+
+#header {
+    background: #2d2d2d;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 #header-img {
@@ -54,7 +69,7 @@ header {
 .hero {
     position: relative;
     width: 80%;
-    height: 85vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     margin: auto;
@@ -81,25 +96,74 @@ header {
     color: #F7BD3D;
 }
 
-.hero-img {
-    width: 40%;
-    align-items: right;
-
+.hero-img{
+    text-align: right;
 }
 
 .hero-img img {
     width: 100%;
     height: 100%;
+    justify-content: right;
 }
 
-.container {
-    background-color: rgb(241, 241, 241);
+@media (max-width: 1600px){
+    .hero-text h1{
+        font-size: 3em;
+    }
+    .hero-img img {
+        width: 80%;
+        height: 80%;
+    }
+}
 
+@media (max-width: 1200px){
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        padding-top: 20%;
+    }
+    
+    .hero-text{
+        text-align: center;
+        width: 100%;
+    }
+    
+    .hero-text h1{
+        font-size: 2em;
+    }
+
+    .hero-img{
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+.yellow {
+    background-color: #F7BD3D;
 }
 
 .black {
-    background-color: rgb(27, 27, 27);
+    background-color: #2d2d2d;
 }
+
+
+/*VIDEO*/
+#video-con {
+    text-align: center;
+    padding: 50px;
+}
+
+#video {
+    width: 200;
+    height: 315;
+}
+
+
 
 .pricing {
     width: 80%;
@@ -113,6 +177,7 @@ header {
     padding-top: 40px;
     font-size: 4em;
     color: rgb(41, 41, 41);
+    text-align: center;
 }
 .pricing-table {
     align-items: center;
@@ -192,14 +257,64 @@ header {
 
 .contact {
     width: 80%;
-    height: 100vh;
+    height: 85vh;
     position: relative;
     margin: auto;
-    justify-content: space-between;
+    text-align: center;
     color: white;
 }
 
 .contact h1 {
-    padding-top: 40px;
+    padding-top: 60px;
     font-size: 4em;
+    justify-content: center;
+    color: #000000;
+}
+
+.contact-form {
+    padding-top: 100px;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    padding: 20px 40px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(253, 253, 253);
+    transition: 0.;
+}
+
+.contact-form-text:focus{
+    box-shadow: 0 0 1px 2px #000000;
+}
+
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background: #0e0e0e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.footer{
+    height: 10vh;
+    background-color: #2d2d2d;
+    text-align: center;
+    line-height: 10vh;
+}
+
+.footer h2{
+    color: white;
+    margin-top: auto;
+    font-weight: 500;
 }
